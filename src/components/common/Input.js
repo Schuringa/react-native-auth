@@ -2,12 +2,18 @@ import React from 'react'
 import { TextInput, View, Text } from 'react-native'
 import PropTypes from 'prop-types'
 
-const Input = ({ label, value, onChangeText }) => {
+const Input = ({ label, value, onChangeText, placeholder }) => {
   const { inputStyle, labelStyle, containerStyle } = styles
   return (
     <View style={containerStyle}>
       <Text style={labelStyle}> {label} </Text>
-      <TextInput style={inputStyle} value={value} onChangeText={onChangeText} />
+      <TextInput
+        placeholder={placeholder}
+        autoCorrect={false}
+        style={inputStyle}
+        value={value}
+        onChangeText={onChangeText}
+      />
     </View>
   )
 }
@@ -15,7 +21,8 @@ const Input = ({ label, value, onChangeText }) => {
 Input.propTypes = {
   label: PropTypes.string,
   value: PropTypes.string,
-  onChangeText: PropTypes.func
+  onChangeText: PropTypes.func,
+  placeholder: PropTypes.string
 }
 
 const styles = {
