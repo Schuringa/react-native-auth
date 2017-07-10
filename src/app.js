@@ -5,7 +5,7 @@ import { Header } from './components/common'
 import LoginForm from './components/LoginForm'
 
 class App extends Component {
-  componenetWillMount () {
+  componentWillMount () {
     // Initialize Firebase
     firebase.initializeApp({
       apiKey: 'AIzaSyAREqqoQA_wywN9PXRzmBsar0VSmFC1S2s',
