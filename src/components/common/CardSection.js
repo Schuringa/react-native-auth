@@ -11,7 +11,7 @@ const CardSection = props => {
 }
 
 CardSection.propTypes = {
-  children: PropTypes.array
+  children: PropTypes.object
 }
 
 const styles = {

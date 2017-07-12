@@ -6,14 +6,16 @@ const Button = ({ onPress, children }) => {
   const { buttonStyle, textStyle } = styles
   return (
     <TouchableOpacity onPress={onPress} style={buttonStyle}>
-      <Text style={textStyle}>{children}</Text>
+      <Text style={textStyle}>
+        {children}
+      </Text>
     </TouchableOpacity>
   )
 }
 
 Button.propTypes = {
   onPress: PropTypes.func,
-  children: PropTypes.object
+  children: PropTypes.string
 }
 
 const styles = {
